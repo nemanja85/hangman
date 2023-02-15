@@ -6,8 +6,8 @@ function App() {
     return words[Math.floor(Math.random() * words.length)];
   });
   return (
-    <div className="flex items-center flex-col gap-8 m-w-[800px] mx-auto my-0 font-serif font-normal">
-      <div className="text-md text-center font-semibold">Win/Lose</div>
+    <div className="flex items-center flex-col gap-8 m-w-[800px] font-serif font-normal py-5 mx-auto my-0">
+      <div className="text-2xl text-center font-semibold">Win/Lose</div>
     </div>
   );
 }
