@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { HangmanDrawing } from './components/HangmanDrawing';
 import { HangmanWord } from './components/HangmanWord';
+import { Keyboard } from './components/Keyboard';
 import words from './wordList.json';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <div className="text-2xl font-semibold text-center">Win/Lose</div>
       <HangmanDrawing />
       <HangmanWord />
+      <Keyboard />
     </div>
   );
 }
