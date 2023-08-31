@@ -13,7 +13,7 @@ const leftLeg = <div className="absolute right-0 w-24 h-3 origin-bottom-right -r
 
 const BODY_PARTS = [head, body, rightArm, leftArm, rightLeg, leftLeg];
 
-export function HangmanDrawing(numberOfGuesses: HangmanDrawingProps) {
+export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
   return (
     <div className="relative">
       {BODY_PARTS.slice(0, numberOfGuesses)}
