@@ -37,7 +37,14 @@ export function Keyboard() {
       }}
     >
       {KEYS.map((key) => {
-        return <button key={key}>{key}</button>;
+        return (
+          <button
+            className="w-full p-3 text-2xl font-bold uppercase bg-transparent border-2 border-black cursor-pointer aspect-square hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white active:bg-gray-800 active:text-white"
+            key={key}
+          >
+            {key}
+          </button>
+        );
       })}
     </div>
   );

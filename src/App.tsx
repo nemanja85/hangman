@@ -13,7 +13,9 @@ function App() {
       <div className="text-2xl font-semibold text-center">Win/Lose</div>
       <HangmanDrawing />
       <HangmanWord />
-      <Keyboard />
+      <div style={{ alignSelf: 'stretch' }}>
+        <Keyboard />
+      </div>
     </div>
   );
 }
