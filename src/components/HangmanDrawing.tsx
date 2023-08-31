@@ -1,5 +1,5 @@
 type HangmanDrawingProps = {
-  numberofGuesses: number;
+  numberOfGuesses: number;
 };
 
 const head = (
@@ -11,15 +11,12 @@ const leftArm = <div className="absolute w-24 h-3 origin-bottom-right rotate-45 
 const rightLeg = <div className="absolute w-24 h-3 origin-bottom-left rotate-45 bg-gray-800 top-44 -right-20"></div>;
 const leftLeg = <div className="absolute right-0 w-24 h-3 origin-bottom-right -rotate-45 bg-gray-800 top-44"></div>;
 
-export function HangmanDrawing(numberofGuesses: HangmanDrawingProps) {
+const BODY_PARTS = [head, body, rightArm, leftArm, rightLeg, leftLeg];
+
+export function HangmanDrawing(numberOfGuesses: HangmanDrawingProps) {
   return (
     <div className="relative">
-      {head}
-      {body}
-      {rightArm}
-      {leftArm}
-      {rightLeg}
-      {leftLeg}
+      {BODY_PARTS.slice(0, numberOfGuesses)}
       <div className="absolute top-0 right-0 w-3 h-12 bg-slate-800"></div>
       <div className="h-3 ml-32 bg-gray-800 w-52"></div>
       <div className="w-3 ml-32 bg-gray-800 h-96"></div>
