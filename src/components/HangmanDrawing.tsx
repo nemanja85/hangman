@@ -1,3 +1,7 @@
+type HangmanDrawingProps = {
+  numberofGuesses: number;
+};
+
 const head = (
   <div className="absolute border-8 border-gray-800 border-solid rounded-full w-14 h-14 -right-5 top-11"></div>
 );
@@ -7,7 +11,7 @@ const leftArm = <div className="absolute w-24 h-3 origin-bottom-right rotate-45 
 const rightLeg = <div className="absolute w-24 h-3 origin-bottom-left rotate-45 bg-gray-800 top-44 -right-20"></div>;
 const leftLeg = <div className="absolute right-0 w-24 h-3 origin-bottom-right -rotate-45 bg-gray-800 top-44"></div>;
 
-export function HangmanDrawing() {
+export function HangmanDrawing(numberofGuesses: HangmanDrawingProps) {
   return (
     <div className="relative">
       {head}
