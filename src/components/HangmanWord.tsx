@@ -1,9 +1,9 @@
 type HangmanWordProps = {
-  quessedLetters: string[];
+  guessedLetters: string[];
   wordToGuest: string;
 };
 
-export function HangmanWord({ quessedLetters, wordToGuest }: HangmanWordProps) {
+export function HangmanWord({ guessedLetters, wordToGuest }: HangmanWordProps) {
   const word = 'test';
   //const guessedLetters = ['e', 'n', 's', 'm', 'p'];
   return (
@@ -12,7 +12,7 @@ export function HangmanWord({ quessedLetters, wordToGuest }: HangmanWordProps) {
         <span className="border-b-4 border-solid border-slate-800" key={idx}>
           <span
             style={{
-              visibility: quessedLetters.includes(letter) ? 'visible' : 'hidden',
+              visibility: guessedLetters.includes(letter) ? 'visible' : 'hidden',
             }}
           >
             {letter}
