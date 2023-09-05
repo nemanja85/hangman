@@ -1,0 +1,7 @@
+button.active {
+  @apply bg-gray-800 text-white;
+}
+
+button.inactive {
+  @apply bg-transparent opacity-30;
+}

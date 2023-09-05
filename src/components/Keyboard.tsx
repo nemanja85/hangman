@@ -1,3 +1,5 @@
+import styles from './Keyboard.module.css';
+
 const KEYS = [
   'a',
   'b',
@@ -27,7 +29,13 @@ const KEYS = [
   'z',
 ];
 
-export function Keyboard() {
+type KeyboardProps = {
+  activeLetter: string[];
+  inactiveLetters: string[];
+  addGuessedLetter: (letter: string) => void;
+};
+
+export function Keyboard({ activeLetter, inactiveLetters, addGuessedLetter }: KeyboardProps) {
   return (
     <div
       style={{
@@ -37,9 +45,14 @@ export function Keyboard() {
       }}
     >
       {KEYS.map((key) => {
+        const isActive = activeLetter.includes(key);
+        const isInactive = inactiveLetters.includes(key);
         return (
           <button
-            className="w-full p-3 text-2xl font-bold uppercase bg-transparent border-2 border-black cursor-pointer aspect-square hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white active:bg-gray-800 active:text-white"
+            onClick={() => addGuessedLetter(key)}
+            className={`w-full p-3 text-2xl font-bold uppercase bg-transparent border-2 border-black cursor-pointer aspect-square hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white active:bg-gray-800 active:text-white ${
+              isActive ? styles.active : ''
+            } ${isInactive ? styles.inactive : ''}`}
             key={key}
           >
             {key}
