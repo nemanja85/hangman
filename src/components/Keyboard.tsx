@@ -33,9 +33,10 @@ type KeyboardProps = {
   activeLetter: string[];
   inactiveLetters: string[];
   addGuessedLetter: (letter: string) => void;
+  disabled?: boolean;
 };
 
-export function Keyboard({ activeLetter, inactiveLetters, addGuessedLetter }: KeyboardProps) {
+export function Keyboard({ activeLetter, inactiveLetters, addGuessedLetter, disabled = false }: KeyboardProps) {
   return (
     <div
       style={{
@@ -53,6 +54,7 @@ export function Keyboard({ activeLetter, inactiveLetters, addGuessedLetter }: Ke
             className={`w-full p-3 text-2xl font-bold uppercase bg-transparent border-2 border-black cursor-pointer aspect-square hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white active:bg-gray-800 active:text-white ${
               isActive ? styles.active : ''
             } ${isInactive ? styles.inactive : ''}`}
+            disabled={isActive || isInactive || disabled}
             key={key}
           >
             {key}

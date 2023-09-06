@@ -21,7 +21,7 @@ function App() {
 
       setGuessedLetters((currentLetters) => [...currentLetters, letter]);
     },
-    [guessedLetters]
+    [guessedLetters, isWinner, isLoser]
   );
 
   useEffect(() => {
@@ -50,6 +50,7 @@ function App() {
       <HangmanWord guessedLetters={guessedLetters} wordToGuest={wordToGuest} />
       <div style={{ alignSelf: 'stretch' }}>
         <Keyboard
+          disabled={isWinner || isLoser}
           activeLetter={guessedLetters.filter((letter) => wordToGuest.includes(letter))}
           inactiveLetters={inCorrectLetters}
           addGuessedLetter={addGuessedLetter}
