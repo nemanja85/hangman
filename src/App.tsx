@@ -47,7 +47,7 @@ function App() {
         {isWinner && 'Congratulations, you are won - Refresh page and try again'}
       </div>
       <HangmanDrawing numberOfGuesses={inCorrectLetters.length} />
-      <HangmanWord guessedLetters={guessedLetters} wordToGuest={wordToGuest} />
+      <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuest={wordToGuest} />
       <div style={{ alignSelf: 'stretch' }}>
         <Keyboard
           disabled={isWinner || isLoser}
