@@ -14,7 +14,7 @@ export function HangmanWord({ guessedLetters, wordToGuest, reveal = false }: Han
           <span
             style={{
               visibility: guessedLetters.includes(letter) || reveal ? 'visible' : 'hidden',
-              color: !guessedLetters.includes(letter) && reveal ? 'ff0000' : '#708090',
+              color: !guessedLetters.includes(letter) && reveal ? '#ff0000' : '#708090',
             }}
           >
             {letter}
