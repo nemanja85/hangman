@@ -1,12 +1,6 @@
 # Hangman
 Testing out React, Typescript and Tailwind
 
-## Install
-
-```sh
-npm init @vitejs/app
-```
-
 ## Choose
 
 ```sh
