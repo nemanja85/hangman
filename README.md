@@ -1,12 +1,6 @@
 # Hangman
 Testing out React, Typescript and Tailwind
 
-## Choose
-
-```sh
-react-ts
-```
-
 ## Getting Started
 
 ```sh
@@ -15,6 +9,10 @@ git clone https://github.com/nemanja85/hangman.git
 
 ```sh
 cd hangman
+```
+
+```sh
+npm install 
 ```
 
 ```sh
